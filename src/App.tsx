@@ -1,14 +1,16 @@
-import Home from "./assets/pages/Home/Home"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./assets/pages/Home/sections/Hero/Hero";
 
-const App = () => {
 
-
+function App() {
   return (
-    <>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} />
 
-      <Home />
-    </>
-  )
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
